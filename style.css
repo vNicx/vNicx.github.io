@@ -1,0 +1,256 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow: visible;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: #0f0f0f;
+  padding: 30px;
+  text-align: center;
+  animation: neonPulse 2s infinite alternate;
+  border-bottom: 2px solid #0ff;
+  width: 90vw;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+  100% { box-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+}
+
+#animated-title {
+  font-size: 2.4rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #0ff;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  background-color: #111;
+  width: 90vw;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px #00f;
+}
+
+nav button {
+  padding: 10px 25px;
+  background-color: #000;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-shadow: 0 0 5px #0ff;
+  transition: all 0.3s ease;
+  animation: flicker 3s infinite;
+  flex-shrink: 0;
+}
+
+nav button:hover {
+  background-color: #0ff;
+  color: #000;
+  box-shadow: 0 0 30px #0ff, 0 0 60px #0ff;
+  transform: scale(1.05);
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+
+.section {
+  flex: 1;
+  display: none;
+  padding: 20px 15px;
+  max-width: 700px;
+  width: 90vw;
+  margin: 0 auto;
+  animation: neonPulse 2s infinite alternate;
+  border-left: 2px solid #0ff;
+  border-right: 2px solid #0ff;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #0ff;
+  background-color: #111;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.active {
+  display: block;
+}
+
+h2 {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+  transition: 0.3s;
+  margin-top: 0;
+}
+
+h2:hover {
+  text-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+}
+
+#Home p {
+  margin-top: 40px;
+}
+
+#Home ul {
+  margin-top: 15px;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  margin: 30px auto;
+  perspective: 1200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 0 20px #0ff;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.slide.prev {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  z-index: 1;
+}
+
+.slide.next {
+  opacity: 0;
+  transform: rotateX(90deg);
+  z-index: 1;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #0ff;
+  height: auto;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #0ff;
+}
+
+.pay-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pay-options a {
+  background-color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #0ff;
+  border: 2px solid #0ff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #0ff;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.pay-options a:hover {
+  background-color: #0ff;
+  color: #000;
+  box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+}
+
+ul {
+  list-style-type: '✔ ';
+  line-height: 1.8;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.footer-bar {
+  background-color: #0f0f0f;
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  width: 90vw;
+  max-width: 700px;
+  box-shadow: 0 0 15px #0ff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.footer-bar img {
+  vertical-align: middle;
+  height: 20px;
+  filter: drop-shadow(0 0 5px #0ff);
+}
+
+@media (max-width: 500px) {
+  #animated-title {
+    font-size: 1.8rem;
+  }
+  nav button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  .pay-options a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}

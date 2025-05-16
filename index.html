@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>vNico - Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="animated-title"></h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('Home')">Home</button>
+    <button onclick="showSection('shop')">Shop</button>
+  </nav>
+
+  <section id="Home" class="section active">
+    <div class="slideshow-container" id="slideshow">
+      <img src="img/5.png" class="slide prev" alt="Slide 5" />
+      <img src="img/1.png" class="slide active" alt="Slide 1" />
+      <img src="img/2.png" class="slide next" alt="Slide 2" />
+      <img src="img/3.png" class="slide" alt="Slide 3" />
+      <img src="img/4.png" class="slide" alt="Slide 4" />
+    </div>
+    <h2>Why Choose Me?</h2>
+    <p>I provide high-quality Roblox GFX, fully customized. Here's what you get:</p>
+    <ul>
+      <li>Fast delivery (often some hours if not busy)</li>
+      <li>HD resolution, perfect for profile pictures</li>
+      <li>Custom poses, accessories, gear, and more</li>
+      <li>One-time payment — the GFX is 100% yours</li>
+    </ul>
+  </section>
+
+  <section id="shop" class="section">
+    <h2>Order Your Custom GFX</h2>
+    <p>Payment methods: Robux and PayPal (DM on Discord)</p>
+    <div class="pay-options">
+      <a href="https://discord.com/users/1053438131828953108" target="_blank">💳 Pay with PayPal (DM on Discord)</a>
+      <a href="https://discord.com/users/1053438131828953108" target="_blank">🪙 Pay with Robux (DM on Discord)</a>
+    </div>
+    <h3 style="margin-top:40px;">Some of My Work</h3>
+    <div class="gallery">
+      <img src="img/1.png" alt="Work 1" />
+      <img src="img/2.png" alt="Work 2" />
+      <img src="img/3.png" alt="Work 3" />
+      <img src="img/4.png" alt="Work 4" />
+      <img src="img/5.png" alt="Work 5" />
+    </div>
+  </section>
+
+  <div class="footer-bar">
+    Payment Methods:
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Robux_2019_Logo_gold.svg" alt="Robux" />
+    Robux
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
